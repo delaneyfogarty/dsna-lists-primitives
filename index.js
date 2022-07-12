@@ -22,4 +22,8 @@ function oddishOrEvenish(number) {
   return digits % 2 ? "Oddish" : "Evenish";
 }
 
-module.exports = { reverseWords, titleCase, oddishOrEvenish };
+function at(arr, index) {
+    return index > -1 ? arr[index] : arr[arr.length + index];
+}
+
+module.exports = { reverseWords, titleCase, oddishOrEvenish, at };
