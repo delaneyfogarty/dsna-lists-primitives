@@ -6,8 +6,20 @@ function reverseWords(sentence) {
 }
 
 function titleCase(sentence) {
-    const words = sentence.split(' '); //splits sentence into array
-    const final = words.map(word => word.charAt(0).toUpperCase() + word.slice(1)); //splits each word into array and capitalizes first letter
-    return final.join(' ')
+  const words = sentence.split(" "); //splits sentence into array
+  const final = words.map(
+    (word) => word.charAt(0).toUpperCase() + word.slice(1)
+  ); //splits each word into array and capitalizes first letter
+  return final.join(" ");
 }
-module.exports = { reverseWords, titleCase };
+
+function oddishOrEvenish(number) {
+  const digits = number
+    .toString()
+    .split("") // stringifying numbers in order to split them apart
+    .map((digit) => Number(digit)) // mapping over each digit to turn it back to an actual number
+    .reduce((acc, curr) => acc + curr);
+  return digits % 2 ? "Oddish" : "Evenish";
+}
+
+module.exports = { reverseWords, titleCase, oddishOrEvenish };

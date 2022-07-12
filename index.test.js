@@ -1,4 +1,4 @@
-const { reverseWords, titleCase } = require(".");
+const { reverseWords, titleCase, oddishOrEvenish } = require(".");
 
 describe("reverseWords", () => {
   it("should reverse the words of a sentence", () => {
@@ -6,5 +6,9 @@ describe("reverseWords", () => {
   });
   it("should capitlaze the first letter of the words of a sentence", () => {
     expect(titleCase("alchemy rocks gold")).toBe("Alchemy Rocks Gold");
+  });
+  it("should return Evenish if the sum of digits is even; Oddish for an odd sum ", () => {
+    expect(oddishOrEvenish(12)).toBe("Oddish");
+    expect(oddishOrEvenish(44)).toBe("Evenish");
   });
 });
